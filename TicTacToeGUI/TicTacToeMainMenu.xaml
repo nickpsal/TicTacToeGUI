@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="TicTacToeGUI.TicTacToeMainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicTacToeGUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="1" Content="Παιχνίδι Τρίλιζα Player vs Computer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        <Button Grid.Row="2" Height="50" Content="Νεο Παιχνίδι" FontSize="35" VerticalAlignment="Top" Margin="0,49,0,0" Click="LoadBoard"/>
+        <Button Grid.Row="2" Height="50" Content="Πληροφορίες" FontSize="35" VerticalAlignment="Top" Margin="0,147,0,0" Click="Gameinfo"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="TicTacToeGUI.TicTacToeBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicTacToeGUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid x:Name="TicTacToeGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"  Content="Παιχνίδι Τρίλιζα Player vs Computer" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        <Label x:Name="PlayerScore" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontSize="16" />
+        <Label x:Name="PlayerTurn" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <Button x:Name="Place00" Grid.Row="4" Grid.Column="1" Content="{Binding ButtonItems[0]}" 
+                    CommandParameter="1" Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place01" Grid.Row="4" Grid.Column="2" Content="{Binding ButtonItems[1]}" 
+                    CommandParameter="2"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place02" Grid.Row="4" Grid.Column="3" Content="{Binding ButtonItems[2]}"
+	                CommandParameter="3"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place10" Grid.Row="5" Grid.Column="1" Content="{Binding ButtonItems[3]}"
+                    CommandParameter="4"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place11" Grid.Row="5" Grid.Column="2" Content="{Binding ButtonItems[4]}"
+                    CommandParameter="5"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place12" Grid.Row="5" Grid.Column="3" Content="{Binding ButtonItems[5]}"
+                    CommandParameter="6"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place20" Grid.Row="6" Grid.Column="1" Content="{Binding ButtonItems[6]}"
+                    CommandParameter="7"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place21" Grid.Row="6" Grid.Column="2" Content="{Binding ButtonItems[7]}"
+                    CommandParameter="8"  Click="CellClickedCommand" FontSize="90" />
+        <Button x:Name="Place22" Grid.Row="6" Grid.Column="3" Content="{Binding ButtonItems[8]}"
+                    CommandParameter="9"  Click="CellClickedCommand" FontSize="90" />
+    </Grid>
+</UserControl>
